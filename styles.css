@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --purple: #6610F2;
+  --white: #F9F9F9;
+  --white-200: #EAEAEA;
+  --gray: #2F2F2F;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--white);
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  padding: 1.5rem 4rem;
+  background-color: #FFF;
+  border: 0.2rem solid var(--white-200);
+  border-radius: 10rem;
+  transition: filter 0.25s;
+  font-size: 1.6rem;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+.button-rounded {
+  border-radius: 50%;
+  padding: 0;
+  width: 5rem;
+  height: 5rem;
+
+}
+
+.button-secondary {
+  font-weight: 500;
+}
+
+.button-primary {
+  background-color: var(--purple);
+  font-weight: 600;
+  color: var(--white);
+  border: none;
+}
+
+
+
+
+/* HEADER */
+
+.header {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.header__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.header__logo {
+  font-family: 'Sen', sans-serif;
+  color: var(--gray);
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+/* MAIN */
+
+.main {
+  max-width: 114rem;
+  margin: 17rem auto 0 auto;
+  text-align: center;
+  color: var(--gray);
+  position: relative;
+}
+
+.main>h3 {
+  text-transform: uppercase;
+  margin-bottom: 3.3rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.main>h1 {
+  font-size: 6.4rem;
+  line-height: 7rem;
+  font-weight: 700;
+  font-family: 'Sen', sans-serif;
+}
+
+.main__buttons {
+  margin-top: 15.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.memoji {
+  width: 20rem;
+  height: 20rem;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  overflow: visible;
+}
+
+.memoji img {
+  max-width: 15rem;
+  max-height: 15rem;
+
+}
+
+#memoji-01-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: upAndDown infinite backwards alternate ease-in-out 2s;
+}
+
+#memoji-01 {
+  background: linear-gradient(136.92deg, #2DC7ED 3.14%, rgba(45, 199, 237, 0) 100%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  width: 28.3rem;
+  height: 28.3rem;
+  position: absolute
+}
+
+#memoji-01-container img {
+  position: relative;
+  z-index: 1000;
+}
+
+
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+#memoji-01:hover {
+  border-radius: 3rem;
+}
+
+#memoji-01 img {
+  transform: rotate(-45deg);
+}
+
+#memoji-02 {
+  background: linear-gradient(270deg, #F2C94C 0%, rgba(242, 201, 76, 0) 100%);
+  clip-path: circle();
+  top: -8rem;
+  right: -3rem;
+  animation: upAndDown infinite backwards alternate ease-in-out 2s;
+}
+
+
+#memoji-03-container {
+  position: absolute;
+  right: -8rem;
+  bottom: -12rem;
+  animation: upAndDown infinite backwards alternate ease-in-out 2s;
+}
+
+#memoji-03 {
+  background: linear-gradient(180deg, #00E861 0%, rgba(0, 232, 97, 0) 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  width: 17.3rem;
+  height: 15rem;
+  position: relative;
+}
+
+#memoji-03-container img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-40%);
+}
+
+#memoji-04 {
+  background: linear-gradient(270deg, #7248EC 0%, rgba(114, 72, 236, 0) 100%);
+  bottom: -28rem;
+  clip-path: circle();
+  right: 36rem;
+  animation: upAndDown infinite backwards alternate ease-in-out 2s;
+}
+
+#memoji-05 {
+  background: linear-gradient(136.92deg, #EF7C89 3.14%, rgba(239, 124, 137, 0) 100%);
+  border-radius: 30px;
+  animation: upAndDown infinite backwards alternate ease-in-out 2s;
+}
+
+/* QUOTES */
+
+.quotes {
+  max-width: 114rem;
+  margin: 39rem auto 0 auto;
+  background-color: #FCFCFC;
+  padding: 6rem 7.5rem;
+  display: flex;
+}
+
+.quotes__quote>h4 {
+  color: #2F2F2F;
+  font-family: "Sen", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: 0.75;
+  padding-left: 1.2rem;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.quotes__quote>h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--purple);
+}
+
+.quotes__quote>blockquote {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gray);
+  line-height: 2.6rem;
+}
